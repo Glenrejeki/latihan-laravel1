@@ -16,5 +16,13 @@ class HomeController extends Controller
 
     }
 
-}
 
+    public function todoDetail()
+
+    {
+
+        return view('pages.app.todos.detail');
+
+    }
+
+}

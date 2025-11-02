@@ -23,12 +23,13 @@ Route::group(['prefix' => 'app', 'middleware' => 'check.auth'], function () {
 
     Route::get('/home', [HomeController::class, 'index'])->name('app.home');
 
+    Route::get('/todos/{todo_id}', [HomeController::class, 'todoDetail'])->name('app.todos.detail');
+
 });
 
 
 Route::get('/', function () {
 
-    return view('welcome');
+    return redirect()->route('app.home');
 
 });
-
